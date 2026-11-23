@@ -1,0 +1,548 @@
+<!DOCTYPE html>
+<html lang="hi" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>तुरंत आवश्यकता! प्लंबर और हेल्पर की जरूरत | ठेकेदार: श्री राजकुमार</title>
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- Google Fonts: Noto Sans Devanagari & Inter -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&family=Noto+Sans+Devanagari:wght@400;600;700;800;900&display=swap" rel="stylesheet" />
+  <!-- Font Awesome for Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['"Noto Sans Devanagari"', 'Inter', 'sans-serif'],
+          },
+          colors: {
+            navy: {
+              950: '#041324',
+              900: '#071E38',
+              800: '#0D2F57',
+              700: '#15447A',
+            },
+            amberbrand: {
+              400: '#FBBF24',
+              500: '#F59E0B',
+              600: '#D97706',
+            },
+            urgentred: {
+              600: '#B91C1C',
+              700: '#991B1B',
+            }
+          }
+        }
+      }
+    };
+  </script>
+
+  <style>
+    body {
+      font-family: 'Noto Sans Devanagari', 'Inter', sans-serif;
+      background-color: #041324;
+      color: #ffffff;
+    }
+    /* Subtle blueprint / industrial pattern overlay */
+    .blueprint-bg {
+      background-image:
+        radial-gradient(rgba(251, 191, 36, 0.08) 1px, transparent 1px),
+        linear-gradient(to right, rgba(255, 255, 255, 0.03) 1px, transparent 1px),
+        linear-gradient(to bottom, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
+      background-size: 24px 24px, 48px 48px, 48px 48px;
+    }
+    .gold-gradient {
+      background: linear-gradient(135deg, #FBBF24 0%, #F59E0B 100%);
+    }
+    .orange-ribbon {
+      background: linear-gradient(90deg, #EA580C 0%, #F59E0B 50%, #EA580C 100%);
+    }
+  </style>
+</head>
+<body class="blueprint-bg min-h-screen flex flex-col justify-between antialiased selection:bg-amber-400 selection:text-navy-950">
+
+  <!-- Toast Notification Box (Replaces alert) -->
+  <div id="toast-box" class="fixed bottom-20 sm:bottom-6 left-1/2 -translate-x-1/2 z-50 hidden bg-emerald-600 text-white px-5 py-3 rounded-xl shadow-2xl border border-emerald-300 font-semibold text-sm sm:text-base flex items-center gap-2 transition-all duration-300">
+    <i class="fa-solid fa-circle-check text-lg"></i>
+    <span id="toast-message">लिंक कॉपी हो गया है!</span>
+  </div>
+
+  <!-- Top Sticky Navigation & Language Switcher -->
+  <header class="sticky top-0 z-40 bg-navy-950/95 backdrop-blur-md border-b border-amber-400/25 shadow-lg">
+    <div class="max-w-5xl mx-auto px-4 py-3 flex items-center justify-between gap-2">
+      <!-- Brand / Contractor Pill -->
+      <a href="#top" class="flex items-center gap-2.5">
+        <div class="w-10 h-10 rounded-xl gold-gradient text-navy-950 flex items-center justify-center shadow-md shrink-0">
+          <i class="fa-solid fa-wrench text-lg"></i>
+        </div>
+        <div>
+          <span class="block text-xs text-amber-400 font-bold uppercase tracking-wider" data-hi="प्लंबिंग कॉन्ट्रैक्टर" data-en="Plumbing Contractor">प्लंबिंग कॉन्ट्रैक्टर</span>
+          <span class="block text-sm sm:text-base font-extrabold text-white leading-tight" data-hi="ठेकेदार: श्री राजकुमार" data-en="Contractor: Shri Rajkumar">ठेकेदार: श्री राजकुमार</span>
+        </div>
+      </a>
+
+      <!-- Right Controls: Quick Apply & Language Toggle -->
+      <div class="flex items-center gap-2 sm:gap-3">
+        <!-- Language Toggle Button -->
+        <button id="lang-toggle" type="button" aria-label="Switch Language" class="px-3 py-2 rounded-xl bg-navy-800 hover:bg-navy-700 border border-amber-400/40 text-amber-300 text-xs sm:text-sm font-bold flex items-center gap-1.5 transition active:scale-95">
+          <i class="fa-solid fa-language text-base"></i>
+          <span id="lang-label">English</span>
+        </button>
+
+        <!-- Direct Contact Anchor -->
+        <a href="#contact-section" class="px-3.5 py-2 rounded-xl gold-gradient text-navy-950 font-extrabold text-xs sm:text-sm shadow-md hover:brightness-105 transition active:scale-95 flex items-center gap-1.5">
+          <i class="fa-solid fa-file-pen"></i>
+          <span data-hi="आवेदन करें" data-en="Apply Now">आवेदन करें</span>
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main Content Container -->
+  <main id="top" class="flex-1">
+
+    <!-- HERO SECTION -->
+    <section class="relative overflow-hidden border-b-4 border-amber-500">
+      <!-- Decorative diagonal industrial stripes -->
+      <div class="orange-ribbon h-2 w-full"></div>
+
+      <div class="max-w-5xl mx-auto px-4 pt-7 pb-10 sm:pt-12 sm:pb-14 text-center relative z-10">
+        <!-- Urgent Badge -->
+        <div class="inline-flex items-center gap-2 bg-urgentred-700 border-2 border-white text-white px-5 py-1.5 rounded-full shadow-xl mb-5 animate-pulse">
+          <i class="fa-solid fa-triangle-exclamation text-amber-300"></i>
+          <span class="text-base sm:text-lg font-black tracking-wide" data-hi="तुरंत आवश्यकता!" data-en="URGENT REQUIREMENT!">तुरंत आवश्यकता!</span>
+        </div>
+
+        <!-- Main Headline -->
+        <h1 class="text-3xl sm:text-5xl md:text-6xl font-black leading-tight tracking-tight mb-4 drop-shadow">
+          <span class="text-amber-400" data-hi="प्लंबर और हेल्पर" data-en="Plumbers & Helpers">प्लंबर और हेल्पर</span>
+          <span class="text-white" data-hi=" की जरूरत" data-en=" Needed"> की जरूरत</span>
+        </h1>
+
+        <!-- Subtitle -->
+        <p class="max-w-3xl mx-auto text-base sm:text-xl md:text-2xl font-bold text-slate-100 leading-relaxed mb-7">
+          <span data-hi="चल रहे " data-en="For ongoing ">चल रहे </span>
+          <span class="text-amber-400 underline decoration-amber-500/60 underline-offset-4" data-hi="बहुमंजिला (Multi-Floor) बिल्डिंग प्रोजेक्ट्स" data-en="Multi-Floor Building Projects">बहुमंजिला (Multi-Floor) बिल्डिंग प्रोजेक्ट्स</span>
+          <span data-hi=" के लिए कुशल और अर्ध-कुशल श्रमिकों की आवश्यकता।" data-en=" — Skilled and Semi-Skilled workers required immediately."> के लिए कुशल और अर्ध-कुशल श्रमिकों की आवश्यकता।</span>
+        </p>
+
+        <!-- Primary Hero CTA Buttons -->
+        <div class="flex flex-col sm:flex-row items-center justify-center gap-3.5 sm:gap-4 max-w-2xl mx-auto">
+          <a href="https://docs.google.com/forms/d/e/1FAIpQLSfzleBTZYKQ86FtIs2PV4e4xIG08hoXmC6YNEHOLMuHCpjTyQ/viewform?usp=publish-editor" target="_blank" rel="noopener noreferrer"
+             class="w-full sm:w-auto flex-1 gold-gradient text-navy-950 font-black text-base sm:text-lg px-6 py-4 rounded-2xl shadow-xl border-2 border-white hover:brightness-105 transition transform hover:-translate-y-0.5 flex items-center justify-center gap-2.5">
+            <i class="fa-solid fa-up-right-from-square text-lg"></i>
+            <span data-hi="ऑनलाइन फॉर्म भरें (Fill Form Online)" data-en="Fill Form Online (Google Form)">ऑनलाइन फॉर्म भरें (Fill Form Online)</span>
+          </a>
+
+          <a href="tel:9415791290"
+             class="w-full sm:w-auto bg-navy-800 hover:bg-navy-700 text-white font-extrabold text-base sm:text-lg px-6 py-4 rounded-2xl shadow-xl border-2 border-amber-400 transition flex items-center justify-center gap-2.5">
+            <i class="fa-solid fa-phone-volume text-amber-400"></i>
+            <span>9415791290</span>
+          </a>
+        </div>
+
+        <!-- Industrial Site Highlights Strip -->
+        <div class="mt-8 grid grid-cols-3 gap-2 sm:gap-4 max-w-2xl mx-auto">
+          <div class="bg-navy-900/90 border border-amber-400/30 rounded-xl p-3 flex flex-col items-center">
+            <i class="fa-solid fa-building text-amber-400 text-xl sm:text-2xl mb-1"></i>
+            <span class="text-xs sm:text-sm font-bold text-slate-200" data-hi="बहुमंजिला साइट्स" data-en="Multi-Floor Sites">बहुमंजिला साइट्स</span>
+          </div>
+          <div class="bg-navy-900/90 border border-amber-400/30 rounded-xl p-3 flex flex-col items-center">
+            <i class="fa-solid fa-helmet-safety text-amber-400 text-xl sm:text-2xl mb-1"></i>
+            <span class="text-xs sm:text-sm font-bold text-slate-200" data-hi="सेफ्टी और औजार" data-en="Tools & Safety Gear">सेफ्टी और औजार</span>
+          </div>
+          <div class="bg-navy-900/90 border border-amber-400/30 rounded-xl p-3 flex flex-col items-center">
+            <i class="fa-solid fa-indian-rupee-sign text-amber-400 text-xl sm:text-2xl mb-1"></i>
+            <span class="text-xs sm:text-sm font-bold text-slate-200" data-hi="समय पर भुगतान" data-en="Timely Payment">समय पर भुगतान</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- OPEN POSITIONS & PERKS SECTION -->
+    <section class="max-w-5xl mx-auto px-4 py-10 sm:py-14">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+
+        <!-- Left Column (7 cols): Open Positions -->
+        <div class="lg:col-span-7 space-y-5">
+          <div class="inline-flex items-center gap-2.5 gold-gradient text-navy-950 px-5 py-2 rounded-xl font-black text-lg sm:text-xl shadow-md">
+            <i class="fa-solid fa-briefcase"></i>
+            <h2 data-hi="खाली पद (Open Positions):" data-en="Open Positions (खाली पद):">खाली पद (Open Positions):</h2>
+          </div>
+
+          <!-- Position 1: Skilled Plumber -->
+          <article class="bg-navy-900/95 border-2 border-amber-400/40 hover:border-amber-400 rounded-2xl p-5 sm:p-6 shadow-xl transition">
+            <div class="flex flex-wrap items-center justify-between gap-2 mb-3">
+              <div class="flex items-center gap-3">
+                <div class="w-11 h-11 rounded-xl bg-amber-400/15 border border-amber-400 text-amber-400 flex items-center justify-center shrink-0">
+                  <i class="fa-solid fa-faucet-drip text-xl"></i>
+                </div>
+                <div>
+                  <h3 class="text-xl sm:text-2xl font-extrabold text-amber-400" data-hi="1. कुशल प्लंबर (मिस्त्री)" data-en="1. Skilled Plumber (Mistry)">1. कुशल प्लंबर (मिस्त्री)</h3>
+                  <span class="text-xs font-bold uppercase tracking-wider text-slate-300" data-hi="अनुभवी कारीगर" data-en="Experienced Technician">अनुभवी कारीगर</span>
+                </div>
+              </div>
+              <span class="bg-emerald-500/20 text-emerald-300 border border-emerald-400/40 text-xs font-bold px-3 py-1 rounded-full" data-hi="तुरंत भर्ती" data-en="Immediate Hiring">तुरंत भर्ती</span>
+            </div>
+            <div class="bg-navy-950/70 rounded-xl p-3.5 border border-white/10 text-slate-100 text-sm sm:text-base leading-relaxed">
+              <strong class="text-amber-300" data-hi="कार्य:" data-en="Duties:">कार्य:</strong>
+              <span data-hi="CPVC, UPVC, SWR पाइप फिटिंग, कंसील्ड सिस्टर्न, डायवर्टर और कमोड फिटिंग, नक्शा समझना।"
+                    data-en="CPVC, UPVC, SWR pipe fitting, concealed cistern, diverter & commode installation, reading plumbing drawings/blueprints.">
+                CPVC, UPVC, SWR पाइप फिटिंग, कंसील्ड सिस्टर्न, डायवर्टर और कमोड फिटिंग, नक्शा समझना।
+              </span>
+            </div>
+          </article>
+
+          <!-- Position 2: Assistant Plumber -->
+          <article class="bg-navy-900/95 border-2 border-amber-400/40 hover:border-amber-400 rounded-2xl p-5 sm:p-6 shadow-xl transition">
+            <div class="flex flex-wrap items-center justify-between gap-2 mb-3">
+              <div class="flex items-center gap-3">
+                <div class="w-11 h-11 rounded-xl bg-amber-400/15 border border-amber-400 text-amber-400 flex items-center justify-center shrink-0">
+                  <i class="fa-solid fa-screwdriver-wrench text-xl"></i>
+                </div>
+                <div>
+                  <h3 class="text-xl sm:text-2xl font-extrabold text-amber-400" data-hi="2. सहायक प्लंबर (असिस्टेंट)" data-en="2. Assistant Plumber">2. सहायक प्लंबर (असिस्टेंट)</h3>
+                  <span class="text-xs font-bold uppercase tracking-wider text-slate-300" data-hi="अर्ध-कुशल श्रमिक" data-en="Semi-Skilled Worker">अर्ध-कुशल श्रमिक</span>
+                </div>
+              </div>
+              <span class="bg-emerald-500/20 text-emerald-300 border border-emerald-400/40 text-xs font-bold px-3 py-1 rounded-full" data-hi="तुरंत भर्ती" data-en="Immediate Hiring">तुरंत भर्ती</span>
+            </div>
+            <div class="bg-navy-950/70 rounded-xl p-3.5 border border-white/10 text-slate-100 text-sm sm:text-base leading-relaxed">
+              <strong class="text-amber-300" data-hi="कार्य:" data-en="Duties:">कार्य:</strong>
+              <span data-hi="पाइप काटना, सॉल्वेंट जॉइंटिंग, बेसिन व नल लगाना, मिस्त्री की मदद करना।"
+                    data-en="Pipe cutting, solvent jointing, installing wash basins & taps, assisting the senior plumber (mistry).">
+                पाइप काटना, सॉल्वेंट जॉइंटिंग, बेसिन व नल लगाना, मिस्त्री की मदद करना।
+              </span>
+            </div>
+          </article>
+
+          <!-- Position 3: Plumbing Helper -->
+          <article class="bg-navy-900/95 border-2 border-amber-400/40 hover:border-amber-400 rounded-2xl p-5 sm:p-6 shadow-xl transition">
+            <div class="flex flex-wrap items-center justify-between gap-2 mb-3">
+              <div class="flex items-center gap-3">
+                <div class="w-11 h-11 rounded-xl bg-amber-400/15 border border-amber-400 text-amber-400 flex items-center justify-center shrink-0">
+                  <i class="fa-solid fa-person-digging text-xl"></i>
+                </div>
+                <div>
+                  <h3 class="text-xl sm:text-2xl font-extrabold text-amber-400" data-hi="3. प्लंबिंग हेल्पर (मजदूर)" data-en="3. Plumbing Helper (Labour)">3. प्लंबिंग हेल्पर (मजदूर)</h3>
+                  <span class="text-xs font-bold uppercase tracking-wider text-slate-300" data-hi="साइट सहायता" data-en="Site Support">साइट सहायता</span>
+                </div>
+              </div>
+              <span class="bg-emerald-500/20 text-emerald-300 border border-emerald-400/40 text-xs font-bold px-3 py-1 rounded-full" data-hi="तुरंत भर्ती" data-en="Immediate Hiring">तुरंत भर्ती</span>
+            </div>
+            <div class="bg-navy-950/70 rounded-xl p-3.5 border border-white/10 text-slate-100 text-sm sm:text-base leading-relaxed">
+              <strong class="text-amber-300" data-hi="कार्य:" data-en="Duties:">कार्य:</strong>
+              <span data-hi="दीवार काटना (झिरी), सामान इधर-उधर करना, खुदाई और साइट पर मदद।"
+                    data-en="Wall chasing/cutting (jhiri), shifting plumbing materials, digging, and general on-site assistance.">
+                दीवार काटना (झिरी), सामान इधर-उधर करना, खुदाई और साइट पर मदद।
+              </span>
+            </div>
+          </article>
+        </div>
+
+        <!-- Right Column (5 cols): Perks & Benefits -->
+        <div class="lg:col-span-5">
+          <div class="bg-navy-900 border-2 border-amber-400 rounded-3xl p-6 sm:p-7 shadow-2xl relative overflow-hidden">
+            <!-- Header Pill -->
+            <div class="gold-gradient text-navy-950 font-black text-lg sm:text-xl px-4 py-2.5 rounded-xl text-center shadow mb-6 flex items-center justify-center gap-2">
+              <i class="fa-solid fa-award"></i>
+              <h2 data-hi="सुविधाएं और लाभ (Perks):" data-en="Perks & Benefits (सुविधाएं और लाभ):">सुविधाएं और लाभ (Perks):</h2>
+            </div>
+
+            <ul class="space-y-4">
+              <!-- Perk 1 -->
+              <li class="bg-navy-950/80 border border-amber-400/25 rounded-2xl p-4 flex items-start gap-3.5">
+                <div class="w-10 h-10 rounded-xl bg-amber-400 text-navy-950 flex items-center justify-center shrink-0 mt-0.5 font-bold">
+                  <i class="fa-solid fa-wallet text-lg"></i>
+                </div>
+                <div>
+                  <h3 class="font-extrabold text-amber-300 text-base sm:text-lg" data-hi="आकर्षक एवं समय पर वेतन" data-en="Attractive & Timely Salary">आकर्षक एवं समय पर वेतन</h3>
+                  <p class="text-slate-200 text-sm mt-0.5" data-hi="(साप्ताहिक एडवांस व मासिक भुगतान)" data-en="(Weekly advance & guaranteed monthly payment)">(साप्ताहिक एडवांस व मासिक भुगतान)</p>
+                </div>
+              </li>
+
+              <!-- Perk 2 -->
+              <li class="bg-navy-950/80 border border-amber-400/25 rounded-2xl p-4 flex items-start gap-3.5">
+                <div class="w-10 h-10 rounded-xl bg-amber-400 text-navy-950 flex items-center justify-center shrink-0 mt-0.5 font-bold">
+                  <i class="fa-solid fa-calendar-check text-lg"></i>
+                </div>
+                <div>
+                  <h3 class="font-extrabold text-amber-300 text-base sm:text-lg" data-hi="लगातार काम" data-en="Continuous Work">लगातार काम</h3>
+                  <p class="text-slate-200 text-sm mt-0.5" data-hi="(लॉन्ग-टर्म प्रोजेक्ट्स, काम की कोई कमी नहीं)" data-en="(Long-term projects, zero shortage of work)">(लॉन्ग-टर्म प्रोजेक्ट्स, काम की कोई कमी नहीं)</p>
+                </div>
+              </li>
+
+              <!-- Perk 3 -->
+              <li class="bg-navy-950/80 border border-amber-400/25 rounded-2xl p-4 flex items-start gap-3.5">
+                <div class="w-10 h-10 rounded-xl bg-amber-400 text-navy-950 flex items-center justify-center shrink-0 mt-0.5 font-bold">
+                  <i class="fa-solid fa-toolbox text-lg"></i>
+                </div>
+                <div>
+                  <h3 class="font-extrabold text-amber-300 text-base sm:text-lg" data-hi="औजार और सुरक्षा उपकरण" data-en="Tools & Safety Equipment">औजार और सुरक्षा उपकरण</h3>
+                  <p class="text-slate-200 text-sm mt-0.5" data-hi="(साइट पर मिलेंगे)" data-en="(Provided directly on site)">(साइट पर मिलेंगे)</p>
+                </div>
+              </li>
+
+              <!-- Perk 4 -->
+              <li class="bg-navy-950/80 border border-amber-400/25 rounded-2xl p-4 flex items-start gap-3.5">
+                <div class="w-10 h-10 rounded-xl bg-amber-400 text-navy-950 flex items-center justify-center shrink-0 mt-0.5 font-bold">
+                  <i class="fa-solid fa-clock text-lg"></i>
+                </div>
+                <div>
+                  <h3 class="font-extrabold text-amber-300 text-base sm:text-lg" data-hi="ओवरटाइम का अतिरिक्त पैसा व यात्रा भत्ता" data-en="Extra Overtime Pay & Travel Allowance">ओवरटाइम का अतिरिक्त पैसा व यात्रा भत्ता</h3>
+                  <p class="text-slate-200 text-sm mt-0.5" data-hi="अतिरिक्त काम के लिए पूरा भुगतान" data-en="Full compensation for extra hours & travel">अतिरिक्त काम के लिए पूरा भुगतान</p>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PROMINENT CONTACT & APPLY ONLINE SECTION -->
+    <section id="contact-section" class="max-w-5xl mx-auto px-4 pb-16">
+      <div class="gold-gradient text-navy-950 rounded-3xl border-4 border-white shadow-2xl p-6 sm:p-10 relative overflow-hidden">
+
+        <!-- Top Red Contact Pill -->
+        <div class="text-center mb-6">
+          <div class="inline-flex items-center gap-2 bg-urgentred-700 text-white border-2 border-white px-6 py-2 rounded-full shadow-lg text-lg sm:text-xl font-black">
+            <i class="fa-solid fa-address-card"></i>
+            <h2 data-hi="संपर्क करें (Contact):" data-en="Contact Us (संपर्क करें):">संपर्क करें (Contact):</h2>
+          </div>
+
+          <p class="mt-4 text-2xl sm:text-4xl font-black text-navy-950 tracking-tight" data-hi="ठेकेदार: श्री राजकुमार" data-en="Contractor: Shri Rajkumar">
+            ठेकेदार: श्री राजकुमार
+          </p>
+          <p class="text-sm sm:text-base font-bold text-navy-900 mt-1" data-hi="सीधे कॉल करें, व्हाट्सएप पर मैसेज भेजें या नीचे दिए गए ऑनलाइन फॉर्म को भरें" data-en="Call directly, send a WhatsApp message, or fill out the online application form below">
+            सीधे कॉल करें, व्हाट्सएप पर मैसेज भेजें या नीचे दिए गए ऑनलाइन फॉर्म को भरें
+          </p>
+        </div>
+
+        <!-- Phone & WhatsApp Action Cards -->
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-7">
+          <!-- Number 1: 9415791290 -->
+          <div class="bg-white/95 rounded-2xl p-4 sm:p-5 shadow-md border-2 border-navy-950/15 flex flex-col sm:flex-row items-center justify-between gap-3">
+            <div class="text-center sm:text-left">
+              <span class="text-xs font-extrabold uppercase tracking-wider text-navy-700 block" data-hi="प्राथमिक संपर्क नंबर" data-en="Primary Contact Number">प्राथमिक संपर्क नंबर</span>
+              <span class="text-2xl sm:text-3xl font-black text-navy-950 tracking-wide">9415791290</span>
+            </div>
+            <div class="flex items-center gap-2 w-full sm:w-auto justify-center">
+              <a href="tel:9415791290" class="flex-1 sm:flex-initial bg-navy-900 hover:bg-navy-800 text-white font-bold px-4 py-3 rounded-xl flex items-center justify-center gap-2 transition active:scale-95">
+                <i class="fa-solid fa-phone"></i>
+                <span data-hi="कॉल" data-en="Call">कॉल</span>
+              </a>
+              <a href="https://wa.me/919415791290?text=नमस्ते%20श्री%20राजकुमार%20जी,%20मैं%20प्लंबर/हेल्पर%20के%20काम%20के%20लिए%20आवेदन%20करना%20चाहता%20हूँ।" target="_blank" rel="noopener noreferrer"
+                 class="flex-1 sm:flex-initial bg-emerald-600 hover:bg-emerald-700 text-white font-bold px-4 py-3 rounded-xl flex items-center justify-center gap-2 transition active:scale-95">
+                <i class="fa-brands fa-whatsapp text-lg"></i>
+                <span>WhatsApp</span>
+              </a>
+            </div>
+          </div>
+
+          <!-- Number 2: 9696290288 -->
+          <div class="bg-white/95 rounded-2xl p-4 sm:p-5 shadow-md border-2 border-navy-950/15 flex flex-col sm:flex-row items-center justify-between gap-3">
+            <div class="text-center sm:text-left">
+              <span class="text-xs font-extrabold uppercase tracking-wider text-navy-700 block" data-hi="वैकल्पिक संपर्क नंबर" data-en="Alternate Contact Number">वैकल्पिक संपर्क नंबर</span>
+              <span class="text-2xl sm:text-3xl font-black text-navy-950 tracking-wide">9696290288</span>
+            </div>
+            <div class="flex items-center gap-2 w-full sm:w-auto justify-center">
+              <a href="tel:9696290288" class="flex-1 sm:flex-initial bg-navy-900 hover:bg-navy-800 text-white font-bold px-4 py-3 rounded-xl flex items-center justify-center gap-2 transition active:scale-95">
+                <i class="fa-solid fa-phone"></i>
+                <span data-hi="कॉल" data-en="Call">कॉल</span>
+              </a>
+              <a href="https://wa.me/919696290288?text=नमस्ते%20श्री%20राजकुमार%20जी,%20मैं%20प्लंबर/हेल्पर%20के%20काम%20के%20लिए%20आवेदन%20करना%20चाहता%20हूँ।" target="_blank" rel="noopener noreferrer"
+                 class="flex-1 sm:flex-initial bg-emerald-600 hover:bg-emerald-700 text-white font-bold px-4 py-3 rounded-xl flex items-center justify-center gap-2 transition active:scale-95">
+                <i class="fa-brands fa-whatsapp text-lg"></i>
+                <span>WhatsApp</span>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Online Form Application Box -->
+        <div class="bg-navy-950 text-white rounded-2xl p-5 sm:p-7 border-2 border-white/80 shadow-xl text-center">
+          <div class="inline-flex items-center gap-2 text-amber-400 font-extrabold text-sm sm:text-base uppercase tracking-wider mb-2">
+            <i class="fa-solid fa-clipboard-list"></i>
+            <span data-hi="आसान ऑनलाइन पंजीकरण" data-en="Easy Online Registration">आसान ऑनलाइन पंजीकरण</span>
+          </div>
+          <h3 class="text-xl sm:text-2xl font-black text-white mb-2" data-hi="घर बैठे अपना नाम और अनुभव दर्ज करें" data-en="Submit Your Name & Experience Online">
+            घर बैठे अपना नाम और अनुभव दर्ज करें
+          </h3>
+          <p class="text-slate-300 text-sm sm:text-base max-w-2xl mx-auto mb-5" data-hi="ऑनलाइन फॉर्म भरने के बाद हमारी टीम आपसे संपर्क करेगी।" data-en="Once you submit the online Google Form, our team will call you back shortly.">
+            ऑनलाइन फॉर्म भरने के बाद हमारी टीम आपसे संपर्क करेगी।
+          </p>
+
+          <!-- Action Buttons Row -->
+          <div class="flex flex-col sm:flex-row items-center justify-center gap-3 max-w-3xl mx-auto">
+            <!-- Open in New Tab -->
+            <a href="https://docs.google.com/forms/d/e/1FAIpQLSfzleBTZYKQ86FtIs2PV4e4xIG08hoXmC6YNEHOLMuHCpjTyQ/viewform?usp=publish-editor" target="_blank" rel="noopener noreferrer"
+               class="w-full sm:w-auto flex-1 gold-gradient text-navy-950 font-black text-base sm:text-lg px-6 py-4 rounded-xl shadow-lg hover:brightness-105 transition flex items-center justify-center gap-2">
+              <i class="fa-solid fa-up-right-from-square"></i>
+              <span data-hi="Fill Form Online / ऑनलाइन फॉर्म भरें" data-en="Fill Form Online (Open Form)">Fill Form Online / ऑनलाइन फॉर्म भरें</span>
+            </a>
+
+            <!-- Toggle Embedded Form -->
+            <button id="toggle-embed-btn" type="button"
+                    class="w-full sm:w-auto bg-navy-800 hover:bg-navy-700 text-amber-300 border border-amber-400/50 font-bold text-sm sm:text-base px-5 py-4 rounded-xl transition flex items-center justify-center gap-2">
+              <i class="fa-solid fa-window-maximize"></i>
+              <span id="toggle-embed-text" data-hi="यहीं फॉर्म खोलें" data-en="Open Form Here">यहीं फॉर्म खोलें</span>
+            </button>
+
+            <!-- Copy Form Link -->
+            <button id="copy-link-btn" type="button"
+                    class="w-full sm:w-auto bg-navy-800 hover:bg-navy-700 text-white border border-white/25 font-bold text-sm sm:text-base px-5 py-4 rounded-xl transition flex items-center justify-center gap-2">
+              <i class="fa-solid fa-copy"></i>
+              <span data-hi="लिंक कॉपी करें" data-en="Copy Link">लिंक कॉपी करें</span>
+            </button>
+          </div>
+
+          <!-- Hidden Input for Reliable Clipboard Copy -->
+          <input type="text" id="form-url-input" readonly value="https://docs.google.com/forms/d/e/1FAIpQLSfzleBTZYKQ86FtIs2PV4e4xIG08hoXmC6YNEHOLMuHCpjTyQ/viewform?usp=publish-editor" class="sr-only" aria-hidden="true" />
+
+          <!-- Collapsible Embedded Google Form Container -->
+          <div id="embedded-form-wrapper" class="hidden mt-6 pt-6 border-t border-white/15">
+            <div class="flex items-center justify-between mb-3 text-left">
+              <span class="text-sm font-bold text-amber-400" data-hi="ऑनलाइन आवेदन फॉर्म (Google Form)" data-en="Online Application Form (Google Form)">ऑनलाइन आवेदन फॉर्म (Google Form)</span>
+              <a href="https://docs.google.com/forms/d/e/1FAIpQLSfzleBTZYKQ86FtIs2PV4e4xIG08hoXmC6YNEHOLMuHCpjTyQ/viewform?usp=publish-editor" target="_blank" rel="noopener noreferrer" class="text-xs text-slate-300 underline hover:text-white" data-hi="पूरी स्क्रीन में खोलें ↗" data-en="Open Full Screen ↗">पूरी स्क्रीन में खोलें ↗</a>
+            </div>
+            <div class="w-full bg-white rounded-xl overflow-hidden shadow-inner">
+              <iframe
+                id="google-form-iframe"
+                data-src="https://docs.google.com/forms/d/e/1FAIpQLSfzleBTZYKQ86FtIs2PV4e4xIG08hoXmC6YNEHOLMuHCpjTyQ/viewform?embedded=true"
+                title="Plumber & Helper Recruitment Application Form"
+                class="w-full h-[640px] border-0"
+                loading="lazy">
+                Loading…
+              </iframe>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Sticky Mobile Bottom Action Bar -->
+  <div class="sm:hidden fixed bottom-0 inset-x-0 z-40 bg-navy-950/95 backdrop-blur-md border-t border-amber-400/40 px-3 py-2.5 flex items-center gap-2 shadow-2xl">
+    <a href="tel:9415791290" class="flex-1 bg-navy-800 text-white border border-amber-400/50 font-extrabold text-xs py-2.5 rounded-xl flex items-center justify-center gap-1.5">
+      <i class="fa-solid fa-phone text-amber-400"></i>
+      <span data-hi="कॉल करें" data-en="Call Now">कॉल करें</span>
+    </a>
+    <a href="https://wa.me/919415791290?text=नमस्ते%20श्री%20राजकुमार%20जी,%20मैं%20प्लंबर/हेल्पर%20के%20काम%20के%20लिए%20आवेदन%20करना%20चाहता%20हूँ।" target="_blank" rel="noopener noreferrer" class="flex-1 bg-emerald-600 text-white font-extrabold text-xs py-2.5 rounded-xl flex items-center justify-center gap-1.5">
+      <i class="fa-brands fa-whatsapp text-sm"></i>
+      <span>WhatsApp</span>
+    </a>
+    <a href="https://docs.google.com/forms/d/e/1FAIpQLSfzleBTZYKQ86FtIs2PV4e4xIG08hoXmC6YNEHOLMuHCpjTyQ/viewform?usp=publish-editor" target="_blank" rel="noopener noreferrer" class="flex-[1.3] gold-gradient text-navy-950 font-black text-xs py-2.5 rounded-xl flex items-center justify-center gap-1.5 shadow">
+      <i class="fa-solid fa-file-signature"></i>
+      <span data-hi="फॉर्म भरें" data-en="Fill Form">फॉर्म भरें</span>
+    </a>
+  </div>
+
+  <!-- Footer -->
+  <footer class="bg-navy-950 border-t border-white/10 text-slate-400 text-center py-6 pb-20 sm:pb-6 px-4 text-xs sm:text-sm">
+    <p class="font-bold text-slate-200 mb-1" data-hi="ठेकेदार: श्री राजकुमार — मल्टी-फ्लोर बिल्डिंग प्लंबिंग प्रोजेक्ट्स" data-en="Contractor: Shri Rajkumar — Multi-Floor Building Plumbing Projects">
+      ठेकेदार: श्री राजकुमार — मल्टी-फ्लोर बिल्डिंग प्लंबिंग प्रोजेक्ट्स
+    </p>
+    <p data-hi="संपर्क: 9415791290, 9696290288" data-en="Contact: 9415791290, 9696290288">
+      संपर्क: 9415791290, 9696290288
+    </p>
+  </footer>
+
+  <!-- Interactive JavaScript -->
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      let currentLang = 'hi';
+      const langToggleBtn = document.getElementById('lang-toggle');
+      const langLabel = document.getElementById('lang-label');
+      const translatableElements = document.querySelectorAll('[data-hi][data-en]');
+
+      // Language Switcher Logic (Hindi <-> English)
+      langToggleBtn.addEventListener('click', () => {
+        currentLang = currentLang === 'hi' ? 'en' : 'hi';
+        document.documentElement.lang = currentLang;
+        langLabel.textContent = currentLang === 'hi' ? 'English' : 'हिंदी';
+
+        translatableElements.forEach((el) => {
+          el.textContent = el.getAttribute(`data-${currentLang}`);
+        });
+
+        // Update toggle embed button text accurately based on open state
+        const embedWrapper = document.getElementById('embedded-form-wrapper');
+        const embedText = document.getElementById('toggle-embed-text');
+        const isOpen = !embedWrapper.classList.contains('hidden');
+        if (isOpen) {
+          embedText.textContent = currentLang === 'hi' ? 'फॉर्म बंद करें' : 'Hide Form';
+        } else {
+          embedText.textContent = currentLang === 'hi' ? 'यहीं फॉर्म खोलें' : 'Open Form Here';
+        }
+      });
+
+      // Toggle Embedded Google Form View
+      const toggleEmbedBtn = document.getElementById('toggle-embed-btn');
+      const embeddedFormWrapper = document.getElementById('embedded-form-wrapper');
+      const toggleEmbedText = document.getElementById('toggle-embed-text');
+      const googleFormIframe = document.getElementById('google-form-iframe');
+
+      toggleEmbedBtn.addEventListener('click', () => {
+        const isHidden = embeddedFormWrapper.classList.contains('hidden');
+        if (isHidden) {
+          // Lazy load iframe on first open
+          if (!googleFormIframe.src) {
+            googleFormIframe.src = googleFormIframe.getAttribute('data-src');
+          }
+          embeddedFormWrapper.classList.remove('hidden');
+          toggleEmbedText.textContent = currentLang === 'hi' ? 'फॉर्म बंद करें' : 'Hide Form';
+          embeddedFormWrapper.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+        } else {
+          embeddedFormWrapper.classList.add('hidden');
+          toggleEmbedText.textContent = currentLang === 'hi' ? 'यहीं फॉर्म खोलें' : 'Open Form Here';
+        }
+      });
+
+      // Copy Link to Clipboard with Custom Toast Notification
+      const copyLinkBtn = document.getElementById('copy-link-btn');
+      const formUrlInput = document.getElementById('form-url-input');
+      const toastBox = document.getElementById('toast-box');
+      const toastMessage = document.getElementById('toast-message');
+      let toastTimeout;
+
+      function showToast(msg) {
+        toastMessage.textContent = msg;
+        toastBox.classList.remove('hidden');
+        clearTimeout(toastTimeout);
+        toastTimeout = setTimeout(() => {
+          toastBox.classList.add('hidden');
+        }, 3000);
+      }
+
+      copyLinkBtn.addEventListener('click', () => {
+        try {
+          formUrlInput.classList.remove('sr-only');
+          formUrlInput.select();
+          formUrlInput.setSelectionRange(0, 99999);
+          document.execCommand('copy');
+          formUrlInput.classList.add('sr-only');
+
+          showToast(
+            currentLang === 'hi'
+              ? 'ऑनलाइन फॉर्म लिंक कॉपी हो गया है!'
+              : 'Online form link copied to clipboard!'
+          );
+        } catch (err) {
+          formUrlInput.classList.add('sr-only');
+          showToast(
+            currentLang === 'hi'
+              ? 'लिंक कॉपी नहीं हो सका, कृपया सीधे बटन दबाएं।'
+              : 'Could not copy link, please tap Fill Form Online.'
+          );
+        }
+      });
+    });
+  </script>
+</body>
+</html>
